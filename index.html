@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragDrop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <h1 class="title">Drag and Drop API</h1>
+        <details>
+            <summary>Detalles</summary>
+                <ul class="summary">
+                    <li style="text-decoration:underline"><strong>Reto 2 de BTC Frontend:</strong></li>
+                    <ol>
+                        <li>Arrastre y suelte los elementos en los diferentes cuadros designados para ello.</li>
+                        <li>Ponga los productos que desee en la cesta.</li>  
+                        <li>En el apartado "Dejar producto" se podrá eliminar un producto que no se quiera comprar.</li>
+                        <li>Pase por caja y realice su compra.</li> 
+                    </ol>
+                    
+                </ul>
+        </details>
+
+    </header>
+
+    <section class="container">
+        <div class="drop-zone mostrador" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)" style="border-color: #31d0de6c;"> Mostrador
+            
+            <div id="myDraggableElement1" class="item1" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
+            
+            <div id="myDraggableElement2" class="item2" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
+            
+            <div id="myDraggableElement3" class="item3"  draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
+        </div>
+    
+        <div class="drop-zone cesta" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)" style="border-color: #31d0de6c;">Cesta</div>
+        
+        <div class="drop-zone dejar-item" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return eliminar(event)" style="border-color: #DE4031;">Dejar producto</div>
+        
+        <div class="drop-zone caja" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)" style="border-color: #31d0de6c;">Pasar por caja</div>
+
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
